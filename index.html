@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey, I'm Really Sorry!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #4a148c;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .heart {
+            color: #ff4081;
+            font-size: 2em;
+            position: absolute;
+            animation: floatUp 3s infinite ease-in-out;
+        }
+        @keyframes floatUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            50% { opacity: 1; transform: translateY(-10px); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        button {
+            background: #4a148c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+        button:hover {
+            background: #6a1b9a;
+            transform: scale(1.1);
+        }
+        button:active {
+            transform: scale(0.9);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>2404200322222
+    <div class="container">
+        <h1>Sorrry Pranaleeee 😔</h1>
+        <p>Yrr so sorry yrrr aaj mi tula time nahi deu shaklo yrrr but partek vel jevha apan bolat htot tevha kahi na kahi hot hotaa yrrrr soo sorryyy  💙</p>
+        <div class="button-container">
+            <button onclick="showLove()">Please mujhe maaf kardoo! 🥲</button>
+            
+        </div>
+        <div id="hearts"></div>
+    </div>
+
+    <script>
+        function showLove() {
+            alert("You're the best! Thanks for forgiving me! ❤️");
+            createHearts();
+        }
+
+
+
+        function createHearts() {
+            const container = document.getElementById("hearts");
+            for (let i = 0; i < 10; i++) {
+                let heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = "❤️";
+                heart.style.left = Math.random() * 100 + "%";
+                heart.style.top = Math.random() * 100 + "%";
+                heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+                container.appendChild(heart);
+                setTimeout(() => heart.remove(), 3000);
+            }
+        }
+    </script>
+</body>
+</html>
